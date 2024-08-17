@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Sponsor 1",
+      "imageUrl": "https://picsum.photos/200/100"
+    },
+    {
+      "name": "Sponsor 2",
+      "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+      "name": "Sponsor 3",
+      "imageUrl": "https://picsum.photos/200/300"
+    },
+    {
+      "name": "Sponsor 4",
+      "imageUrl": "https://picsum.photos/200/400"
+    },
+    {
+        "name": "Sponsor 5",
+        "imageUrl": "https://picsum.photos/200/500"
+      },
+      {
+        "name": "Sponsor 6",
+        "imageUrl": "https://picsum.photos/200/600"
+      }
+  ]

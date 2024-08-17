@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white/90;  
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
