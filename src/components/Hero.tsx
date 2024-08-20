@@ -9,7 +9,7 @@ function Hero() {
         </h1>
         <p className="font-light mt-4 w-full md:max-w-[50%] sm:text-xs md:text-md  text-center md:text-start">
           Join us on 22nd August for an insightful webinar hosted by the IEEE
-          GRSS Club, SRM, where experts will explore the transformative role of
+          GRSS Club, SRM. Where experts will explore the transformative role of
           Machine Learning (ML) and Deep Learning (DL) in Geospatial
           Exploration. This event kicks off at 10:00 AM, with a keynote address
           on "The Role of ML and DL in Geospatial Exploration," followed by
