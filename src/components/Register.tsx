@@ -14,7 +14,6 @@ const Registration: React.FC = () => {
   const [cookies, setCookie] = useCookies(["registeredUsers"]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
@@ -78,7 +77,7 @@ const Registration: React.FC = () => {
     {
       registered?null:
       <div className="flex justify-center w-full">
-      <span onClick={e=>setIsModalOpen(true)} className="w-max mt-4 bg-white text-black hover:bg-transparent active:bg-white/20 hover:outline outline-1 outline-white hover:text-white px-12 py-3 rounded-full cursor-pointer text-lg">Register Now!</span>
+      <span onClick={()=>setIsModalOpen(true)} className="w-max mt-4 bg-white text-black hover:bg-transparent active:bg-white/20 hover:outline outline-1 outline-white hover:text-white px-12 py-3 rounded-full cursor-pointer text-lg">Register Now!</span>
       </div>
       
     }
