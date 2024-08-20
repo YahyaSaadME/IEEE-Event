@@ -98,6 +98,7 @@ const Registration: React.FC = () => {
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              style={{borderWidth:"2px"}}
               className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
               required
             />
@@ -107,6 +108,7 @@ const Registration: React.FC = () => {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              style={{borderWidth:"2px"}}
               className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
               required
             />
@@ -114,6 +116,7 @@ const Registration: React.FC = () => {
             <input
               type="text"
               placeholder="Department"
+              style={{borderWidth:"2px"}}
               className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
               required
             />
