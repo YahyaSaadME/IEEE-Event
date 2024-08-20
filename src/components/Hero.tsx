@@ -2,7 +2,7 @@ import Registration from "./Register";
 
 function Hero() {
   return (
-    <div className="bg-transparent text-white/95 bg-cover bg-top ">
+    <div className="bg-transparent text-white/95 bg-cover bg-top h-screen flex flex-col justify-center">
       <div className="w-full max-w-7xl mx-auto flex flex-col justify-center px-4 xl:px-0 mt-24">
         <h1 className="font-display text-6xl max-md:text-5xl tracking-wider text-center md:text-start">
           Hello There!

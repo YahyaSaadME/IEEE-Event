@@ -16,20 +16,10 @@ function About_Us() {
           style={{ justifyContent: "space-between", alignItems: "center" }}
         >
           <h3
-            className="font-light mt-8 w-full text-justify md:mt-.5 md:pl-10"
+            className="font-light mt-8 w-full text-center md:mt-.5 md:pl-10"
             style={{ paddingRight: "10px" }}
           >
-            The IEEE club at SRMIST is passionate about fostering students'
-            innovation, curiosity, and technological brilliance. They would have
-            a platform to investigate the dynamic fields of electrical and
-            electronics engineering, computer science, and allied fields.The
-            club wants to be the most innovative, team-oriented, and student-run
-            space on campus, which will encourage the development of fresh
-            concepts.Without the ongoing assistance and efforts of the
-            professors, mentors, and students, the club would not have been able
-            to launch.The founding of the IEEE club at SRMIST is evidence of the
-            dedication and spirit of cooperation among our instructors and
-            students.
+            The IEEE Geoscience and Remote Sensing Society (GRSS), a part of IEEE, focuses on technologies for environmental monitoring and Earth observation. It supports research through publications like IEEE Transactions on Geoscience and Remote Sensing and hosts conferences such as IGARSS. Both IEEE and GRSS offer educational resources and networking opportunities, advancing knowledge and standards in their fields.
           </h3>
           <div className="flex item-center justify-between  mt-10">
             <img

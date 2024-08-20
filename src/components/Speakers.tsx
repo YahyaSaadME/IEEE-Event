@@ -1,55 +1,5 @@
-// import SpeakerCard from "./Speakers/SpeakerCard";
+import SpeakerCard from "./Speakers/SpeakerCard";
 
-// const data = [
-// 	{
-// 		name:"",
-// 		desc:"",
-// 		img:"",
-// 		linkedin:"",
-// 		github:"",
-// 		x:"",
-// 	},
-// 	{
-// 		name:"",
-// 		desc:"",
-// 		img:"",
-// 		linkedin:"",
-// 		github:"",
-// 		x:"",
-// 	},
-// 	{
-// 		name:"",
-// 		desc:"",
-// 		img:"",
-// 		linkedin:"",
-// 		github:"",
-// 		x:"",
-// 	},
-// 	{
-// 		name:"",
-// 		desc:"",
-// 		img:"",
-// 		linkedin:"",
-// 		github:"",
-// 		x:"",
-// 	},
-// 	{
-// 		name:"",
-// 		desc:"",
-// 		img:"",
-// 		linkedin:"",
-// 		github:"",
-// 		x:"",
-// 	},
-// 	{
-// 		name:"",
-// 		desc:"",
-// 		img:"",
-// 		linkedin:"",
-// 		github:"",
-// 		x:"",
-// 	},
-// ]
 
 function Speakers() {
 	return (
@@ -58,43 +8,19 @@ function Speakers() {
 				<h1 className="text-center font-display text-5xl max-md:text-4xl tracking-wider pt-20 max-md:pt-12 pb-8 ">
 					Speakers
 				</h1>
-				{/* <div className="grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-4">
-					{/* <SpeakerCard
-						name="Elliot Alderson"
-						desc="Cybersecurity Specialist, AllSafe Cybersecurity"
-						img="https://64.media.tumblr.com/58d08655f4cc29eec322ec9943afe389/tumblr_nu5pv7v6w41up609jo5_400.png"
-						linkedin="https://linkedin.in/"
-						github="https://github.com/"
+				<div className="grid grid-cols-1 max-w-md max-xl:grid-cols-1 max-lg:grid-cols-1 max-sm:grid-cols-1 gap-4">
+					<SpeakerCard
+						name="Muthukumaran R"
+						desc="Muthukumaran R is a Machine Learning researcher and Python programmer with nine years of experience at NASA's IMPACT, focusing on GIS and NLP projects. He is currently pursuing a Ph.D. at the University of Alabama in Huntsville, specializing in deep unsupervised and self-supervised learning models."
+						img="https://media.licdn.com/dms/image/v2/C4D03AQEzb8mpRBgkrQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1618255517414?e=2147483647&v=beta&t=FsEkSebu7Vx1qvXc9a9OiojOn67mi0k657darmqkFDU"
+						linkedin="https://www.linkedin.com/in/muthukumaran-ramasubramanian"
+						github="https://github.com/muthukumaranR"
 						x="https://x.com/"
 					/>
-					<SpeakerCard
-						name="Tyrell Wellick"
-						desc="CTO, E Corp"
-						img="https://pbs.twimg.com/profile_images/711304230339002369/TMeiulxb_400x400.jpg"
-						linkedin="https://linkedin.in/"
-						github=""
-						x="https://x.com/"
-					/>
-					<SpeakerCard
-						name="Bertram Gilfoyle"
-						desc="Systems Engineer, Pied Piper"
-						img="https://gcdnb.pbrd.co/images/mcq2HEjrFD1N.png?o=1"
-						linkedin="https://linkedin.in/"
-						github="https://github.com/"
-						x="https://x.com/"
-					/>
-					<SpeakerCard
-						name="Maurice Moss"
-						desc="IT Support, Reynholm Industries"
-						img="https://64.media.tumblr.com/2e4c7abbfd02ac5b90afe79ec2b42ee7/tumblr_inline_nyhvfjFIxT1r8mwrd_400.jpg"
-						linkedin="https://linkedin.in/"
-						github="https://github.com/"
-						x="https://x.com/"
-					/> */}
-				{/* </div>  */}
-					<h1 className=' text-center text-3xl'>
+				</div> 
+					 {/* <h1 className=' text-center text-3xl'>
 						To be revealed soon!
-					</h1>
+					</h1> */}
 			</div>
 		</div>
 	);

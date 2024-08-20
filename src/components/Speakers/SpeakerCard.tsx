@@ -20,7 +20,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
 				className="w-2/3 aspect-square rounded-full overflow-hidden object-cover object-center"
 			/>
 			<h2 className="font-medium text-2xl mt-8 text-center">{name}</h2>
-			<p className="text-xl mt-2 text-center min-h-[3em]">{desc}</p>
+			<p className="text-xs mt-2 text-center min-h-[3em]">{desc}</p>
 			<div className="mt-4 text-[32px] flex flex-row gap-x-4 items-center">
 				{x && <a href={x}><FaXTwitter /></a>}
 				{linkedin && <a href={linkedin}><FaLinkedin /></a>}
