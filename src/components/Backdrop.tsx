@@ -11,7 +11,7 @@ const Backdrop = () => {
 
       if (!backdropRef.current) return;
       backdropRef.current.style.backgroundColor = `rgba(0,0,0,${
-        scrollOpacity * 0.8
+        scrollOpacity * .8
       })`;
       backdropRef.current.style.backdropFilter = `blur(${scrollOpacity * 4}px)`;
     };
@@ -26,7 +26,7 @@ const Backdrop = () => {
   const backdropRef = useRef<HTMLDivElement>(null);
   return (
     <div className="fixed top-0 left-0 w-full h-screen -z-10">
-      <div ref={backdropRef} className="z-10 absolute inset-0" />
+      <div ref={backdropRef} style={{backdropFilter:"blur(1)px"}} className="z-10 absolute inset-0" />
       <video className="w-full h-full object-cover" autoPlay loop muted>
         <source src={bg} type="video/mp4" />
       </video>

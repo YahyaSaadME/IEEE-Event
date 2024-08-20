@@ -9,15 +9,15 @@ function Navbar() {
   return (
     <div className="border-b border-white/40 backdrop-blur-lg text-white fixed w-full z-50 top-0">
       <div className="h-[64px] w-full max-w-7xl mx-auto flex flex-row items-center justify-between px-4 xl:px-0">
-        <span className="text-xl font-medium font-display">IEEE CIS</span>
+        <span className="text-xl font-medium font-display">IEEE GRSS</span>
 
         <div className="flex max-md:hidden flex-row gap-x-6 text-white/90 items-center">
           <span className="hover:text-white cursor-pointer"><a href="#">Home</a></span>
           <span className="hover:text-white cursor-pointer"><a href="#about_us">About Us</a></span>
           <span className="hover:text-white cursor-pointer"><a href="#event">Event</a></span>
+          <span className="hover:text-white cursor-pointer"><a href="#upcomingevent">Upcoming Event</a></span>
           <span className="hover:text-white cursor-pointer"><a href="#speakers">Speakers</a></span>
-          <span className="hover:text-white cursor-pointer"><a href="#sponsors">Sponsors</a></span>
-          <span className="bg-white text-black hover:bg-black hover:outline outline-1 outline-white hover:text-white px-4 py-1 rounded-full cursor-pointer">Register Now!</span>
+          {/* <span className="bg-white text-black hover:bg-black hover:outline outline-1 outline-white hover:text-white px-4 py-1 rounded-full cursor-pointer">Register Now!</span> */}
         </div>
         
         <div className="hidden max-md:flex relative h-full aspect-square cursor-pointer">
@@ -31,7 +31,7 @@ function Navbar() {
         <span className="hover:text-white cursor-pointer">Event</span>
         <span className="hover:text-white cursor-pointer">Speakers</span>
         <span className="hover:text-white cursor-pointer">Sponsors</span>
-        <span className="w-max bg-white text-black hover:bg-black hover:outline outline-1 outline-white hover:text-white px-4 py-1 rounded-full cursor-pointer">Register Now!</span>
+        {/* <span className="w-max bg-white text-black hover:bg-black hover:outline outline-1 outline-white hover:text-white px-4 py-1 rounded-full cursor-pointer">Register Now!</span> */}
       </div>
     </div>
   )
