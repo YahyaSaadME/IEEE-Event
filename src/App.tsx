@@ -13,7 +13,7 @@ import UpcomingEvents from "./components/UpcomingEvents"
 export default function App() {
     const [isQr, setisQr] = useState(false)
     useEffect(()=>{
-        let data = window.location.href.split("/")
+        let data = window.location.href.split("?")
         data.map((e)=>{setisQr(e=="qr"?true:false)})
         console.log(isQr);
         
