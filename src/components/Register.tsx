@@ -13,6 +13,7 @@ const Registration: React.FC = () => {
   const [registered, setRegistered] = useState(false);
   const [cookies, setCookie] = useCookies(["registeredUsers"]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [Loader, setLoader] = useState(false);
 
   const closeModal = () => setIsModalOpen(false);
 
@@ -24,6 +25,7 @@ const Registration: React.FC = () => {
   }, [cookies.registeredUsers, email]);
 
   const handleSubmit = async (e: React.FormEvent) => {
+    setLoader(true)
     e.preventDefault();
 
     // Check if the user is already registered before proceeding
@@ -64,6 +66,8 @@ const Registration: React.FC = () => {
           { expires: expirationDate }
         );
         setRegistered(true);
+        setLoader(false)
+
       } else {
         console.error("Failed to submit form");
       }
@@ -74,74 +78,105 @@ const Registration: React.FC = () => {
 
   return (
     <>
-    {
-      registered?null:
-      <div className="flex justify-center w-full">
-      <span onClick={()=>setIsModalOpen(true)} className="w-max mt-4 bg-white text-black hover:bg-transparent active:bg-white/20 hover:outline outline-1 outline-white hover:text-white px-12 py-3 rounded-full cursor-pointer text-lg">Register Now!</span>
-      </div>
-      
-    }
-    <div className="flex flex-col items-center justify-center">
-      {!registered ? (
-        <RegistarionForm
-          isOpen={isModalOpen}
-          onClose={closeModal}
-          title="Register Now!"
-        >
-          <form
-            onSubmit={handleSubmit}
-            className="rounded text-gray-900 shadow-md bg-transparent flex" style={{flexDirection:"column"}}
+      {registered ? null : (
+        <div className="flex justify-center w-full">
+          <span
+            onClick={() => setIsModalOpen(true)}
+            className="w-max mt-4 bg-white text-black hover:bg-transparent active:bg-white/20 hover:outline outline-1 outline-white hover:text-white px-12 py-3 rounded-full cursor-pointer text-lg"
           >
-            <label htmlFor="Name" className="text-gray-100 font-light text-sm mt-2 mb-1">Enter your name</label>
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              style={{borderWidth:"2px"}}
-              className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
-              required
-            />
-            <label htmlFor="email" className="text-gray-100 font-light text-sm mt-2 mb-1">Enter your email</label>
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              style={{borderWidth:"2px"}}
-              className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
-              required
-            />
-            <label htmlFor="email" className="text-gray-100 font-light text-sm mt-2 mb-1">Enter your department</label>
-            <input
-              type="text"
-              placeholder="Department"
-              style={{borderWidth:"2px"}}
-              className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
-              required
-            />
-            <button
-              type="submit"
-              className="px-4 py-2 bg-gray-500 text-white rounded text-gray-900"
-            >
-              Register for the Event
-            </button>
-          </form>
-        </RegistarionForm>
-      ) : (
-        <div className="w-full text-center flex flex-col md:justify-start md:items-start items-center">
-          <h1 className="text-2xl font-bold mt-4">Thank you for Registering</h1>
-          <h2 className="text-sm font-light mb-4">Use this QR for getting present in the Event.</h2>
-          {qrCodeValue && (
-            <div className="p-2 bg-white rounded-md" style={{width:"fit-content"}}>
-              <QRCode value={qrCodeValue} />
-            </div>
-          )}
+            Register Now!
+          </span>
         </div>
       )}
-    </div>
+      <div className="flex flex-col items-center justify-center">
+        {!registered ? (
+          <RegistarionForm
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            title="Register Now!"
+          >
+            <form
+              onSubmit={handleSubmit}
+              className="rounded text-gray-900 shadow-md bg-transparent flex"
+              style={{ flexDirection: "column" }}
+            >
+              <label
+                htmlFor="Name"
+                className="text-gray-100 font-light text-sm mt-2 mb-1"
+              >
+                Enter your name
+              </label>
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                style={{ borderWidth: "2px" }}
+                className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
+                required
+              />
+              <label
+                htmlFor="email"
+                className="text-gray-100 font-light text-sm mt-2 mb-1"
+              >
+                Enter your email
+              </label>
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{ borderWidth: "2px" }}
+                className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
+                required
+              />
+              <label
+                htmlFor="email"
+                className="text-gray-100 font-light text-sm mt-2 mb-1"
+              >
+                Enter your department
+              </label>
+              <input
+                type="text"
+                placeholder="Department"
+                style={{ borderWidth: "2px" }}
+                className="mb-2 p-2 bg-transparent border border-gray-300 text-gray-100 placeholder-gray-500 p-2 rounded"
+                required
+              />
+              {Loader ? (
+                <div className="flex justify-center">
+                  <div className="w-10 h-10 border-4 border-dashed rounded-full animate-spin border-gray-100"></div>
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-gray-500 text-white rounded text-gray-900"
+                >
+                  Register for the Event
+                </button>
+              )}
+            </form>
+          </RegistarionForm>
+        ) : (
+          <div className="w-full text-center flex flex-col md:justify-start md:items-start items-center">
+            <h1 className="text-2xl font-bold mt-4">
+              Thank you for Registering
+            </h1>
+            <h2 className="text-sm font-light mb-4">
+              Use this QR for getting present in the Event.
+            </h2>
+            {qrCodeValue && (
+              <div
+                className="p-2 bg-white rounded-md"
+                style={{ width: "fit-content", backgroundColor: "white" }}
+              >
+                <QRCode value={qrCodeValue} />
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </>
-
   );
 };
 
